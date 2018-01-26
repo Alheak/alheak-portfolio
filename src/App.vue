@@ -34,6 +34,7 @@ body {
   color: #963;
   font-size: 15px;
   line-height: 24px;
+  font-size-adjust: auto;
 }
 
 #app {
