@@ -174,23 +174,6 @@ export default {
   outline: none !important;
 }
 
-select {
-  cursor: pointer;
-}
-
-.table>thead>tr>th, .table>tbody>tr>td {
-  border-color: #669999;
-  font-size: 150%;
-}
-
-button, .btn {
-  margin-bottom: 15px;
-}
-
-button:hover, .btn:hover {
-  color: #669999 !important;
-}
-
 .boxGlitch, .textGlitch {
   animation-duration: 1.5s;
   animation-iteration-count: infinite;

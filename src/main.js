@@ -3,7 +3,6 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import Routes from './Routes'
-import * as firebase from 'firebase'
 import VueMeta from 'vue-meta'
 
 Vue.use(VueResource)
@@ -21,14 +20,5 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   render: h => h(App),
-  router: router,
-  created () {
-    firebase.initializeApp({
-      apiKey: 'AIzaSyB9bM1lupwcooEBt4JwFphTHDxrCRshaVI',
-      authDomain: 'alheak-vapor-shop-c6cb1.firebaseapp.com',
-      databaseURL: 'https://alheak-vapor-shop-c6cb1.firebaseio.com',
-      projectId: 'alheak-vapor-shop-c6cb1',
-      storageBucket: 'alheak-vapor-shop-c6cb1.appspot.com'
-    })
-  }
+  router: router
 })
