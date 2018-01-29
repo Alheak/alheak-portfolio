@@ -1,11 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueResource from 'vue-resource'
 import VueRouter from 'vue-router'
 import Routes from './Routes'
 import VueMeta from 'vue-meta'
 
-Vue.use(VueResource)
 Vue.use(VueRouter)
 Vue.use(VueMeta)
 
