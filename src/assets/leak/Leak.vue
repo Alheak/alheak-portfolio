@@ -30,7 +30,7 @@ export default {
   background: url('./data-leak.gif') no-repeat center center;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #leak {
     background-image: url('./data-leak-sm.gif');
   }

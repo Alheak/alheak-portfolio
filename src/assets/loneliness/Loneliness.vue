@@ -88,7 +88,7 @@ export default {
   background: url('./overlay.gif') no-repeat center center;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #loneliness {
     background-image: url('./eye-sm.gif');
   }

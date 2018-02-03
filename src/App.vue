@@ -35,6 +35,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   font-size-adjust: auto;
+  overflow-x: hidden;
 }
 
 #app {
@@ -54,10 +55,18 @@ body {
   border: 2px inset #963;
 }
 
-@media (max-width: 1243px) {
+@media (max-width: 1243px), (max-height: 801px) {
   body {
     width: 100vw;
     max-width: 724px;
+  }
+}
+
+@media (max-width: 724px), (max-height: 801px) {
+  .frame {
+    max-width: 450px;
+    width: 100vw;
+    height: 450px;
   }
 }
 
@@ -67,12 +76,7 @@ body {
   }
 
   .frame {
-    max-width: 450px;
-    width: 100vw;
-    height: 450px;
     border-top: 0;
-    border-left: 0;
-    border-right: 0;
   }
 }
 </style>

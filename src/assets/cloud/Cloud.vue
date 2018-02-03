@@ -77,7 +77,7 @@ export default {
   animation-iteration-count: 1;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #city {
     background-image: url('./bg-sm.gif');
   }

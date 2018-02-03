@@ -34,7 +34,7 @@ export default {
   border: none !important;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #home {
     height: 450px;
     background-image: url('./logo-alheak-sm.gif');

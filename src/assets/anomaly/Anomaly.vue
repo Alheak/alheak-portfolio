@@ -21,6 +21,7 @@ export default {
   },
   data () {
     return {
+      touchY: 0,
       offsetTop: 0,
       glitched: false,
       firstText: 'Something weird is happ- E͍Ａ̴̈́̕ﾙBg.\nﾇ玲j, Ｈ̉͗Ａ̴͕̭́̈́̉̌̆̈́̕̚͜͝lp me!',
@@ -50,6 +51,20 @@ export default {
   },
   mounted () {
     window.addEventListener('wheel', this.parallax)
+
+    document.body.addEventListener('touchstart', (e) => {
+      this.touchY = e.touches[0].pageY
+    })
+
+    document.body.addEventListener('touchmove', (e) => {
+      var newEvent = {
+        wheelDelta: 0
+      }
+
+      newEvent.wheelDelta = this.touchY - e.touches[0].pageY
+
+      this.parallax(newEvent)
+    })
   }
 }
 </script>
@@ -151,7 +166,7 @@ export default {
   background-image: url('./glitch.gif') !important;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #spaceman {
     background-image: url('./anomaly-sm.gif');
   }

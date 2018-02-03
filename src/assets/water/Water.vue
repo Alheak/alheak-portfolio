@@ -30,7 +30,7 @@ export default {
   background: url('water-sampling.gif') no-repeat center center;
 }
 
-@media (max-width: 724px) {
+@media (max-width: 724px), (max-height: 801px) {
   #water {
     background-image: url('water-sampling-sm.gif');
   }

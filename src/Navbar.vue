@@ -57,13 +57,13 @@ export default {
 <style>
 #navbar {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 240px;
   background-color: #000;
 }
 
-@media (max-width: 1243px) {
+@media (max-width: 1243px) and (min-height: 802px), (max-height: 801px) {
   #navbar {
     top: 20px;
     border-top: 2px solid #000;
@@ -73,9 +73,16 @@ export default {
   }
 }
 
+@media (max-height: 801px) {
+  #navbar {
+    left: 135px;
+  }
+}
+
 @media (max-width: 724px) {
   #navbar {
-    top: 0px;
+    top: 0;
+    left: 0;
     width: 100vw;
     border-top: 0;
     border-right: 0;
