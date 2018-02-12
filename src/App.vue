@@ -60,7 +60,7 @@ body {
   text-align: center;
 }
 
-#navbar, .frame {
+#navbar, #home {
   animation: fadeIn 8s linear;
 }
 
