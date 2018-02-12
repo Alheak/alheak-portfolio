@@ -71,7 +71,7 @@ body {
 
 #app {
   padding-top: 20px;
-  animation: changePosition 6s linear;
+  animation: changePosition 6s ease-out;
 }
 
 .content {
