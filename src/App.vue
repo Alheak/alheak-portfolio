@@ -38,6 +38,23 @@ export default {
   }
 }
 
+@keyframes changePosition {
+  0% {
+    position: relative;
+    top: -240px;
+  }
+
+  95% {
+    position: relative;
+    top: -240px;
+  }
+
+  100% {
+    position: relative;
+    top: 0;
+  }
+}
+
 body {
   position: relative;
   height: 100vh;
@@ -54,6 +71,7 @@ body {
 
 #app {
   padding-top: 20px;
+  animation: changePosition 6s linear;
 }
 
 .content {

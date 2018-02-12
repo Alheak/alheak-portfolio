@@ -1,5 +1,5 @@
 <template>
-  <div class="text-container">
+  <div>
     「 <span class="text">{{ prevText === textToDisplay ? prevText : textToDisplay.substr(0, i) }}</span><caret></caret> 」
   </div>
 </template>
@@ -50,30 +50,6 @@ export default {
 </script>
 
 <style>
-@keyframes changePosition {
-  0% {
-    position: relative;
-    top: -240px;
-  }
-
-  95% {
-    position: relative;
-    top: -240px;
-  }
-
-  100% {
-    position: relative;
-    top: 0;
-  }
-}
-
-.text-container {
-  position: relative;
-  top: 0;
-  transform: translateY(0);
-  animation: changePosition 6s linear;
-}
-
 .text {
   white-space: pre-line;
 }
