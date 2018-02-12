@@ -18,8 +18,13 @@ export default {
   },
   data () {
     return {
-      text: 'Welcome.'
+      text: 'Loading...'
     }
+  },
+  mounted () {
+    setTimeout(() => {
+      this.text = 'Welcome.'
+    }, 4000)
   }
 }
 </script>

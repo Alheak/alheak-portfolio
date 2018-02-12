@@ -24,6 +24,20 @@ export default {
   src: url('/src/assets/fonts/tspc98.ttf');
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   position: relative;
   height: 100vh;
@@ -44,6 +58,10 @@ body {
 
 .content {
   text-align: center;
+}
+
+#navbar, .frame {
+  animation: fadeIn 8s linear;
 }
 
 .frame {
