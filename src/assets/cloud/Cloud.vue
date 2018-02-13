@@ -91,7 +91,7 @@ export default {
   display: block;
   position: relative;
   top: 50%;
-  font-family: "PC98", monospace;
+  font-family: "Abel", monospace;
   background-color: #000;
   color: #963;
   border: 2px outset #963;

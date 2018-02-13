@@ -59,7 +59,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 240px;
+  padding-right: 18px;
   background-color: #000;
 }
 

@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-    <navbar></navbar>
+  <div id="app" :class="{'change-position': loaded}">
+    <router-view :loaded="loaded"></router-view>
+    <navbar :class="{'fade-in': loaded}"></navbar>
   </div>
 </template>
 
@@ -14,15 +14,20 @@ export default {
   },
   components: {
     navbar: Navbar
+  },
+  data () {
+    return {
+      loaded: false
+    }
+  },
+  mounted () {
+    this.loaded = true
   }
 }
 </script>
 
 <style>
-@font-face {
-  font-family: "PC98";
-  src: url('/src/assets/fonts/tspc98.ttf');
-}
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
 
 @keyframes fadeIn {
   0% {
@@ -44,7 +49,7 @@ export default {
     top: -240px;
   }
 
-  95% {
+  96.5% {
     position: relative;
     top: -240px;
   }
@@ -60,7 +65,7 @@ body {
   height: 100vh;
   margin: 0 auto;
   width: 1244px;
-  font-family: "PC98", monospace;
+  font-family: "Anonymous Pro", monospace;
   background-color: #000;
   color: #963;
   font-size: 15px;
@@ -71,15 +76,18 @@ body {
 
 #app {
   padding-top: 20px;
+}
+
+.change-position {
   animation: changePosition 6s ease-out;
+}
+
+.fade-in {
+  animation: fadeIn 8s ease-out;
 }
 
 .content {
   text-align: center;
-}
-
-#navbar, #home {
-  animation: fadeIn 8s linear;
 }
 
 .frame {

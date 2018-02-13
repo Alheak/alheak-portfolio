@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="home" class="frame">
+    <div id="home" class="frame" :class="{'fade-in': loaded}">
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>
   </div>
@@ -16,12 +16,20 @@ export default {
   components: {
     'textPrompt': TextPrompt
   },
+  props: {
+    loaded: {
+      type: Boolean,
+      required: true
+    }
+  },
   data () {
     return {
-      text: 'Loading...'
+      text: ''
     }
   },
   mounted () {
+    this.text = 'Loading...'
+
     setTimeout(() => {
       this.text = 'Welcome.'
     }, 4000)
