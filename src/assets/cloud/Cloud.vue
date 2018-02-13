@@ -58,12 +58,6 @@ export default {
   background-repeat: no-repeat;
 }
 
-@media (max-height: 800px) {
-  #city, #cloud, #fade {
-    background-size: cover;
-  }
-}
-
 #cloud {
   height: 100%;
 }

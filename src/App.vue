@@ -91,17 +91,20 @@ body {
 }
 
 .frame {
-  max-width: 720px;
-  width: calc(100vw - 4px);
+  max-width: 724px;
+  width: 100vw;
   height: 720px;
   margin: auto;
   margin-bottom: 10px;
   border: 2px inset #963;
+  box-sizing: border-box;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px) {
   .background-image {
-    transform: scale(0.5) !important;
+    width: 225px !important;
+    height: 225px !important;
+    background-size: contain;
   }
 }
 
