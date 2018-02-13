@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="leak" class="frame">
+    <div id="leak" class="frame background-image">
 
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="uploading" class="frame">
+    <div id="uploading" class="frame background-image">
 
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>

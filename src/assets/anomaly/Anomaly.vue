@@ -1,8 +1,8 @@
 <template>
   <div class="content">
-    <div id="anomaly" class="frame" :class="{ boxGlitch: glitched }">
-      <div id="earth" :style="{ backgroundPosition: 'right ' + offsetTop + 'px' }">
-        <div id="spaceman" :class="{ glitched: glitched }" :style="{ backgroundPosition: 'center ' + (offsetTop * 10) + 'px' }"></div>
+    <div id="anomaly" class="frame background-image" :class="{ boxGlitch: glitched }">
+      <div id="earth" class="background-image" :style="{ backgroundPosition: 'right ' + offsetTop + 'px' }">
+        <div id="spaceman" class="background-image" :class="{ glitched: glitched }" :style="{ backgroundPosition: 'center ' + (offsetTop * 10) + 'px' }"></div>
       </div>
     </div>
     <textPrompt :textToDisplay="whichText" :class="{ textGlitch: glitched }"></textPrompt>

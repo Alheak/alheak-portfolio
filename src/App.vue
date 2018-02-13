@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{'change-position': loaded}">
+  <div id="app">
     <router-view :loaded="loaded"></router-view>
     <navbar :class="{'fade-in': loaded}"></navbar>
   </div>
@@ -97,6 +97,12 @@ body {
   margin: auto;
   margin-bottom: 10px;
   border: 2px inset #963;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px) {
+  .background-image {
+    transform: scale(0.5) !important;
+  }
 }
 
 @media (max-width: 1243px), (max-height: 801px) {

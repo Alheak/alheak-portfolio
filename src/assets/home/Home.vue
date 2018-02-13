@@ -1,6 +1,6 @@
 <template>
-  <div class="content">
-    <div id="home" class="frame" :class="{'fade-in': loaded}">
+  <div class="content" :class="{'change-position': loaded}">
+    <div id="home" class="frame background-image" :class="{'fade-in': loaded}">
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="textures" class="frame">
+    <div id="textures" class="frame background-image">
 
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>

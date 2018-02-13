@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <div id="loneliness" class="frame" v-on:mousemove="trackCursor($event)" :style="{ backgroundPosition: (offset.x - windowWidth) + 'px ' + offset.y + 'px' }">
-      <div id="overlay">
+    <div id="loneliness" class="frame background-image" v-on:mousemove="trackCursor($event)" :style="{ backgroundPosition: (offset.x - windowWidth) + 'px ' + offset.y + 'px' }">
+      <div id="overlay" class="background-image">
       </div>
     </div>
     <textPrompt :textToDisplay="whichText"></textPrompt>

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div id="water" class="frame">
+    <div id="water" class="frame background-image">
 
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>
