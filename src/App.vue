@@ -102,7 +102,7 @@ body {
 
 @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px) {
   .background-image {
-    width: 225px !important;
+    width: 227px !important;
     height: 225px !important;
     background-size: contain !important;
   }
