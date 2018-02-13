@@ -104,7 +104,7 @@ body {
   .background-image {
     width: 225px !important;
     height: 225px !important;
-    background-size: contain;
+    background-size: 50%;
   }
 }
 
