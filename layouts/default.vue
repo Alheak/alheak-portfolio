@@ -1,64 +1,35 @@
 <template>
   <div id="app">
-    <router-view :loaded="loaded"></router-view>
-    <navbar :class="{'fade-in': loaded}"></navbar>
+    <transition name="content" mode="out-in">
+      <div class="content">
+        <nuxt/>
+      </div>
+    </transition>
+    <navbar></navbar>
   </div>
 </template>
 
 <script>
-import Navbar from './Navbar.vue'
+import Navbar from '@/components/Navbar.vue'
 
 export default {
-  metaInfo: {
-    titleTemplate: '%s :: Alheak'
+  head: {
+    titleTemplate: '%s :: Alheak',
+    meta: [
+      {
+        property: 'og:image',
+        content: '/logo-alheak-sm.gif'
+      }
+    ]
   },
   components: {
     navbar: Navbar
-  },
-  data () {
-    return {
-      loaded: false
-    }
-  },
-  mounted () {
-    this.loaded = true
   }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes changePosition {
-  0% {
-    position: relative;
-    top: -240px;
-  }
-
-  96.5% {
-    position: relative;
-    top: -240px;
-  }
-
-  100% {
-    position: relative;
-    top: 0;
-  }
-}
 
 body {
   position: relative;
@@ -76,14 +47,6 @@ body {
 
 #app {
   padding-top: 20px;
-}
-
-.change-position {
-  animation: changePosition 6s ease-out;
-}
-
-.fade-in {
-  animation: fadeIn 8s ease-out;
 }
 
 .content {

@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div id="contact" class="frame">
       <div class="infos">
         <p>
@@ -20,19 +20,9 @@
 </template>
 
 <script>
-import TextPrompt from './Text.vue'
-
 export default {
-  metaInfo: {
+  head: {
     title: 'Contact'
-  },
-  components: {
-    'textPrompt': TextPrompt
-  },
-  data () {
-    return {
-      text: ''
-    }
   }
 }
 </script>

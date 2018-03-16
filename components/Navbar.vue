@@ -4,30 +4,30 @@
       <li>
         <span v-on:click="displayList = !displayList" class="expandList">{{ displayList ? '-' : '+' }} Main Directory</span>
         <ul v-if="displayList" class="main-folder">
-          <li><router-link to="/">Home</router-link></li>
+          <li><nuxt-link to="/">Home</nuxt-link></li>
           <li>
             <span v-on:click="displayWorks = !displayWorks" class="expandList">{{ displayWorks ? '-' : '+' }} Works</span>
             <ul v-if="displayWorks">
               <li>
-                <router-link to="/anomaly">anomaly.alhk</router-link>
+                <nuxt-link to="/anomaly">anomaly</nuxt-link>
               </li>
               <li>
-                <router-link to="/water-sampling">water_sampling.alhk</router-link>
+                <nuxt-link to="/data-leak">data_leak</nuxt-link>
               </li>
               <li>
-                <router-link to="/virtual-loneliness">virtual_loneliness.alhk</router-link>
+                <nuxt-link to="/textures">textures</nuxt-link>
               </li>
               <li>
-                <router-link to="/data-leak">data_leak.alhk</router-link>
+                <nuxt-link to="/the-cloud">the_cloud</nuxt-link>
               </li>
               <li>
-                <router-link to="/textures">textures.alhk</router-link>
+                <nuxt-link to="/uploading">uploading</nuxt-link>
               </li>
               <li>
-                <router-link to="/the-cloud">the_cloud.alhk</router-link>
+                <nuxt-link to="/virtual-loneliness">virtual_loneliness</nuxt-link>
               </li>
               <li>
-                <router-link to="/uploading">uploading.alhk</router-link>
+                <nuxt-link to="/water-sampling">water_sampling</nuxt-link>
               </li>
             </ul>
           </li>
@@ -35,7 +35,7 @@
             <a href="https://alheakvapor.store" target="_blank">Store 🡥</a>
           </li>
           <li>
-            <router-link to="/contact">Contact</router-link>
+            <nuxt-link to="/contact">Contact</nuxt-link>
           </li>
         </ul>
       </li>
@@ -91,6 +91,10 @@ export default {
   }
 }
 
+.nuxt-link-exact-active:before {
+  content: '> ';
+}
+
 .expandList {
   cursor: pointer;
 }
@@ -101,23 +105,38 @@ ul {
 }
 
 .main-folder {
-  padding-left: 10px;
+  padding-left: 18px;
 }
 
 li {
+  position: relative;
   margin-top: 12px;
 }
 
-.main-folder li:before {
+.main-folder li:before, .main-folder li:after {
   display: inline-block;
   width: 8px;
   height: 16px;
-  position: relative;
-  top: -5px;
-  left: -8px;
+  position: absolute;
   content: '';
-  border-bottom: 1px solid #963;
   border-left: 1px solid #963;
+}
+
+.main-folder li:before {
+  height: 16px;
+  top: -3px;
+  left: -15px;
+  border-bottom: 1px solid #963;
+}
+
+.main-folder li:after {
+  height: 19px;
+  top: 14px;
+  left: -15px;
+}
+
+.main-folder li:last-child:after {
+  height: 0;
 }
 
 a {

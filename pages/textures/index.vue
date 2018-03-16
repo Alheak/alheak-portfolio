@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div id="textures" class="frame background-image">
 
     </div>
@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import TextPrompt from '../Text.vue'
+import TextPrompt from '@/components/Text.vue'
 
 export default {
-  metaInfo: {
+  head: {
     title: 'textures'
   },
   components: {

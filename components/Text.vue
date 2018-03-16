@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       i: 1,
-      interval: 60,
+      interval: 45,
       prevText: ''
     }
   },
@@ -28,13 +28,13 @@ export default {
     displayText () {
       if (this.i < this.textToDisplay.length) {
         setTimeout(() => {
-          this.textToDisplay.charAt(this.i) === '.' ? this.interval = 1000 : this.interval = 60
+          this.textToDisplay.charAt(this.i) === '.' ? this.interval = 600 : this.interval = 45
           this.i++
         }, this.interval)
       } else {
         this.prevText = this.textToDisplay
         this.i = 1
-        this.interval = 60
+        this.interval = 45
       }
     }
   },

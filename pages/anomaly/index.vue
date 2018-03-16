@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div id="anomaly" class="frame background-image" :class="{ boxGlitch: glitched }">
       <div id="earth" class="background-image" :style="{ backgroundPosition: 'right ' + offsetTop + 'px' }">
         <div id="spaceman" class="background-image" :class="{ glitched: glitched }" :style="{ backgroundPosition: 'center ' + (offsetTop * 10) + 'px' }"></div>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import TextPrompt from '../Text.vue'
+import TextPrompt from '@/components/Text.vue'
 
 export default {
-  metaInfo: {
+  head: {
     title: 'anomaly'
   },
   components: {
@@ -24,7 +24,7 @@ export default {
       touchY: 0,
       offsetTop: 0,
       glitched: false,
-      firstText: 'Something weird is happ- E͍Ａ̴̈́̕ﾙBg.\nﾇ玲j, Ｈ̉͗Ａ̴͕̭́̈́̉̌̆̈́̕̚͜͝lp me!',
+      firstText: 'Something weird is happ- E͍Ａ̴̈́̕ﾙBg.\nﾇ玲j, Ｈ̉͗Ａ̴́̈́̉̌̕̚͝lp me!',
       secondText: 'AAAAAAaaaaaaaaaaaｿ ・・̰̣͚ﾊ=$#ｧ・・ '
     }
   },

@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div id="leak" class="frame background-image">
 
     </div>
@@ -8,11 +8,11 @@
 </template>
 
 <script>
-import TextPrompt from '../Text.vue'
+import TextPrompt from '@/components/Text.vue'
 
 export default {
-  metaInfo: {
-    title: 'data leak'
+  head: {
+    title: 'data_leak'
   },
   components: {
     'textPrompt': TextPrompt

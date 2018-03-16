@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div>
     <div id="loneliness" class="frame background-image" v-on:mousemove="trackCursor($event)" :style="{ backgroundPosition: (offset.x - windowWidth) + 'px ' + offset.y + 'px' }">
       <div id="overlay" class="background-image">
       </div>
@@ -9,18 +9,18 @@
 </template>
 
 <script>
-import TextPrompt from '../Text.vue'
+import TextPrompt from '@/components/Text.vue'
 
 export default {
-  metaInfo: {
-    title: 'virtual loneliness'
+  head: {
+    title: 'virtual_loneliness'
   },
   components: {
     'textPrompt': TextPrompt
   },
   data () {
     return {
-      windowWidth: window.innerWidth <= 450 ? (225 - window.innerWidth / 2) : 0,
+      windowWidth: 0,
       target: {
         x: 0,
         y: 0
@@ -29,7 +29,7 @@ export default {
         x: 0,
         y: 0
       },
-      factor: window.innerWidth <= 724 ? 30 : 50,
+      factor: 50,
       reset: null,
       firstText: 'I- Is there... someone... something?...',
       secondText: '!',
@@ -38,6 +38,10 @@ export default {
     }
   },
   methods: {
+    setClientVariables () {
+      this.windowWidth = window.innerWidth <= 450 ? (225 - window.innerWidth / 2) : 0
+      this.factor = window.innerWidth <= 724 ? 30 : 50
+    },
     resetPosition () {
       this.reset = setTimeout(() => {
         this.whichText = this.thirdText
@@ -64,6 +68,8 @@ export default {
   },
   mounted () {
     this.whichText = this.firstText
+
+    this.setClientVariables()
 
     setInterval(() => {
       if (this.offset.x !== this.target.x || this.offset.y !== this.target.y) {

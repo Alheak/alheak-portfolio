@@ -1,5 +1,5 @@
 <template>
-  <div class="content" :class="{'change-position': loaded}">
+  <div :class="{'change-position': loaded}">
     <div id="home" class="frame background-image" :class="{'fade-in': loaded}">
     </div>
     <textPrompt :textToDisplay="text"></textPrompt>
@@ -7,24 +7,19 @@
 </template>
 
 <script>
-import TextPrompt from '../Text.vue'
+import TextPrompt from '@/components/Text.vue'
 
 export default {
-  metaInfo: {
+  head: {
     title: 'Home'
   },
   components: {
     'textPrompt': TextPrompt
   },
-  props: {
-    loaded: {
-      type: Boolean,
-      required: true
-    }
-  },
   data () {
     return {
-      text: ''
+      text: '',
+      loaded: false
     }
   },
   mounted () {
@@ -33,18 +28,29 @@ export default {
     setTimeout(() => {
       this.text = 'Welcome.'
     }, 4000)
+
+    setTimeout(() => {
+      this.loaded = true
+    }, 4800)
   }
 }
 </script>
 
 <style>
 #home {
-  height: 720px;
+  height: calc(50vh - 30px);
   background-color: #000;
   background-image: url('./logo-alheak.gif');
   background-position: center center;
   background-repeat: no-repeat;
   border: none !important;
+  opacity: 0;
+}
+
+.fade-in {
+  height: 720px !important;
+  opacity: 1 !important;
+  transition: opacity .8s, height .8s;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
