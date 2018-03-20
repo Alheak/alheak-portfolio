@@ -3,11 +3,11 @@
     <ul>
       <li>
         <span v-on:click="displayList = !displayList" class="expandList">{{ displayList ? '-' : '+' }} Main Directory</span>
-        <ul v-if="displayList" class="main-folder">
+        <ul v-show="displayList" class="main-folder">
           <li><nuxt-link to="/">Home</nuxt-link></li>
           <li>
             <span v-on:click="displayWorks = !displayWorks" class="expandList">{{ displayWorks ? '-' : '+' }} Works</span>
-            <ul v-if="displayWorks">
+            <ul v-show="displayWorks">
               <li>
                 <nuxt-link to="/anomaly">anomaly</nuxt-link>
               </li>
