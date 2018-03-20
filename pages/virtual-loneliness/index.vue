@@ -86,21 +86,21 @@ export default {
 
 <style>
 #loneliness {
-  background: url('./eye.gif') no-repeat center center;
+  background: url('/static/eye.gif') no-repeat center center;
 }
 
 #overlay {
   height: 100%;
-  background: url('./overlay.gif') no-repeat center center;
+  background: url('/static/overlay.gif') no-repeat center center;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
   #loneliness {
-    background-image: url('./eye-sm.gif');
+    background-image: url('/static/eye-sm.gif');
   }
 
   #overlay {
-    background-image: url('./overlay-sm.gif');
+    background-image: url('/static/overlay-sm.gif');
   }
 }
 </style>

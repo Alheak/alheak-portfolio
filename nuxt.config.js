@@ -45,10 +45,18 @@ module.exports = {
   /*
   ** Build configuration
   */
+  buildDir: '../functions/nuxt',
   build: {
     /*
     ** You can extend webpack config here
     */
+    publicPath: '/',
+    babel: {
+      presets: [
+        'es2015',
+        'stage-0'
+      ]
+    },
     extend(config, ctx) {
 
     }

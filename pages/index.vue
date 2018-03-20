@@ -40,7 +40,7 @@ export default {
 #home {
   height: calc(50vh - 30px);
   background-color: #000;
-  background-image: url('./logo-alheak.gif');
+  background-image: url('/static/logo-alheak.gif');
   background-position: center center;
   background-repeat: no-repeat;
   border: none !important;
@@ -56,7 +56,7 @@ export default {
 @media (max-width: 724px), (max-height: 801px) {
   #home {
     height: 450px;
-    background-image: url('./logo-alheak-sm.gif');
+    background-image: url('/static/logo-alheak-sm.gif');
   }
 }
 </style>

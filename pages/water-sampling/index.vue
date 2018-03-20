@@ -27,12 +27,12 @@ export default {
 
 <style>
 #water {
-  background: url('water-sampling.gif') no-repeat center center;
+  background: url('/static/water-sampling.gif') no-repeat center center;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
   #water {
-    background-image: url('water-sampling-sm.gif');
+    background-image: url('/static/water-sampling-sm.gif');
   }
 }
 </style>

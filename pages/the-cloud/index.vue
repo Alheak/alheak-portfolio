@@ -53,7 +53,7 @@ export default {
 
 #city {
   background-color: #000;
-  background-image: url('./bg.gif');
+  background-image: url('/static/bg.gif');
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -63,7 +63,7 @@ export default {
 }
 
 .visible {
-  background-image: url('./the-cloud.gif');
+  background-image: url('/static/the-cloud.gif');
   background-position: center top;
   background-repeat: no-repeat;
   animation-name: fadeIn;
@@ -73,11 +73,11 @@ export default {
 
 @media (max-width: 724px), (max-height: 801px) {
   #city {
-    background-image: url('./bg-sm.gif');
+    background-image: url('/static/bg-sm.gif');
   }
 
   .visible {
-    background-image: url('./the-cloud-sm.gif');
+    background-image: url('/static/the-cloud-sm.gif');
   }
 }
 

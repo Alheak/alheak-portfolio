@@ -148,31 +148,31 @@ export default {
 
 #anomaly {
   position: relative;
-  background-image: url('./bg-repeat.gif');
+  background-image: url('/static/bg-repeat.gif');
 }
 
 #earth {
   height: 100%;
-  background: url('./earth.gif') no-repeat;
+  background: url('/static/earth.gif') no-repeat;
   background-position: right 0px;
 }
 
 #spaceman {
   height: 100%;
-  background: url('./anomaly.gif') no-repeat center center;
+  background: url('/static/anomaly.gif') no-repeat center center;
 }
 
 .glitched {
-  background-image: url('./glitch.gif') !important;
+  background-image: url('/static/glitch.gif') !important;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
   #spaceman {
-    background-image: url('./anomaly-sm.gif');
+    background-image: url('/static/anomaly-sm.gif');
   }
 
   .glitched {
-    background-image: url('./glitch-sm.gif') !important;
+    background-image: url('/static/glitch-sm.gif') !important;
   }
 }
 

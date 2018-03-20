@@ -27,7 +27,7 @@ export default {
 
 <style>
 #textures {
-  background: url('./textures.gif') no-repeat center center;
+  background: url('/statis/textures.gif') no-repeat center center;
   height: 450px !important;
 }
 </style>

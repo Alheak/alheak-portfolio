@@ -27,12 +27,12 @@ export default {
 
 <style>
 #uploading {
-  background: url('./uploading.gif') no-repeat center center;
+  background: url('/static/uploading.gif') no-repeat center center;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
   #uploading {
-    background-image: url('./uploading-sm.gif');
+    background-image: url('/static/uploading-sm.gif');
   }
 }
 </style>
