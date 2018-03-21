@@ -27,12 +27,12 @@ export default {
 
 <style>
 #leak {
-  background: url('/statis/data-leak.gif') no-repeat center center;
+  background: url('/static/data-leak.gif') no-repeat center center;
 }
 
 @media (max-width: 724px), (max-height: 801px) {
   #leak {
-    background-image: url('/statis/data-leak-sm.gif');
+    background-image: url('/static/data-leak-sm.gif');
   }
 }
 </style>

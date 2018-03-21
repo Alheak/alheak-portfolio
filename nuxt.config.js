@@ -57,7 +57,10 @@ module.exports = {
         'stage-0'
       ],
       plugins: [
-        'transform-runtime'
+        ['transform-runtime', {
+          'polyfill': true,
+          'regenerator': true
+        }]
       ]
     },
     extend(config, ctx) {
