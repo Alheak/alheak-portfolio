@@ -55,8 +55,12 @@ export default {
 
 @media (max-width: 724px), (max-height: 801px) {
   #home {
-    height: 450px;
+    height: calc(50vh - 56px);
     background-image: url('/static/logo-alheak-sm.gif');
+  }
+
+  .fade-in {
+    height: 450px !important;
   }
 }
 </style>
