@@ -29,7 +29,10 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@font-face {
+  font-family: 'Anonymous Pro';
+  src: url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+}
 
 body {
   position: relative;
