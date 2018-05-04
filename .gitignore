@@ -12,3 +12,5 @@ dist
 
 # Other
 functions
+.firebaserc
+firebase.json
