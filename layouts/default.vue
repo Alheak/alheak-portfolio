@@ -31,7 +31,7 @@ export default {
 <style>
 @font-face {
   font-family: 'Anonymous Pro';
-  src: url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+  src: url('../static/AnonymousPro-Regular.ttf');
 }
 
 body {
