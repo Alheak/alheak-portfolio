@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="city" class="frame background-image">
-      <div id="cloud" class="background-image" :class="{ visible: connected }">
+      <div id="cloud" class="foreground" :class="{ visible: connected }">
         <button type="button" class="button" v-on:click="load" v-if="!connected" :class="{ fadeOut: i == 100 }">{{ buttonText }}</button>
       </div>
     </div>

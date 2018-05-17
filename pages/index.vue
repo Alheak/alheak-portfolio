@@ -53,7 +53,7 @@ export default {
   transition: opacity .8s, height .8s;
 }
 
-@media (max-width: 724px), (max-height: 801px) {
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px), (max-height: 801px) {
   #home {
     height: calc(50vh - 56px);
     background-image: url('/static/logo-alheak-sm.gif');

@@ -66,10 +66,18 @@ body {
   box-sizing: border-box;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px) {
+.foreground {
+  width: 100%;
+  height: 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px), (max-width: 454px) {
   .background-image {
     width: 227px !important;
     height: 225px !important;
+  }
+
+  .background-image, .foreground {
     background-size: contain !important;
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="loneliness" class="frame background-image" v-on:mousemove="trackCursor($event)" :style="{ backgroundPosition: (offset.x - windowWidth) + 'px ' + offset.y + 'px' }">
-      <div id="overlay" class="background-image">
+    <div id="loneliness" class="frame background-image" v-on:mousemove="trackCursor($event)" :style="{ backgroundPosition: (offset.x - windowOverflowX) + 'px ' + offset.y + 'px' }">
+      <div id="overlay" class="foreground">
       </div>
     </div>
     <textPrompt :textToDisplay="whichText"></textPrompt>
@@ -20,7 +20,9 @@ export default {
   },
   data () {
     return {
-      windowWidth: 0,
+      highDPI: false,
+      windowOverflowX: 0,
+      eyePosition: 255,
       target: {
         x: 0,
         y: 0
@@ -39,8 +41,25 @@ export default {
   },
   methods: {
     setClientVariables () {
-      this.windowWidth = window.innerWidth <= 450 ? (225 - window.innerWidth / 2) : 0
-      this.factor = window.innerWidth <= 724 ? 30 : 50
+      this.highDPI = window.matchMedia('(-webkit-min-device-pixel-ratio: 2) and (max-width: 724px), (min-resolution: 192dpi) and (max-width: 724px)').matches
+
+      this.windowOverflowX = window.innerWidth <= 454 && !this.highDPI ? (225 - window.innerWidth / 2) : 0
+
+      if (window.innerWidth <= 724 && window.innerWidth > 454) {
+        this.factor = 30
+      } else if (window.innerWidth <= 454 || (window.innerWidth <= 724 && this.highDPI)) {
+        this.factor = 20
+      } else {
+        this.factor = 50
+      }
+
+      if (window.innerWidth <= 724 && window.innerWidth > 454) {
+        this.eyePosition = 200
+      } else if (window.innerWidth <= 454 || (window.innerWidth <= 724 && this.highDPI)) {
+        this.eyePosition = 128
+      } else {
+        this.eyePosition = 255
+      }
     },
     resetPosition () {
       this.reset = setTimeout(() => {
@@ -54,7 +73,7 @@ export default {
 
       setTimeout(() => {
         var xCursor = e.clientX - (window.innerWidth / 2)
-        var yCursor = e.clientY - (window.innerWidth <= 724 ? 200 : 255)
+        var yCursor = e.clientY - this.eyePosition
         var xTrigo = Math.round(this.factor * Math.sin(Math.atan(xCursor / Math.abs(yCursor))))
         var yTrigo = Math.round(this.factor * Math.sin(Math.atan(yCursor / Math.abs(xCursor))))
 

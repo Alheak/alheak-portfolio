@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="anomaly" class="frame background-image" :class="{ boxGlitch: glitched }">
-      <div id="earth" class="background-image" :style="{ backgroundPosition: 'right ' + offsetTop + 'px' }">
-        <div id="spaceman" class="background-image" :class="{ glitched: glitched }" :style="{ backgroundPosition: 'center ' + (offsetTop * 10) + 'px' }"></div>
+      <div id="earth" class="foreground" :style="{ backgroundPosition: 'right ' + offsetTop + 'px' }">
+        <div id="spaceman" class="foreground" :class="{ glitched: glitched }" :style="{ backgroundPosition: 'center ' + (offsetTop * 10) + 'px' }"></div>
       </div>
     </div>
     <textPrompt :textToDisplay="whichText" :class="{ textGlitch: glitched }"></textPrompt>
@@ -76,10 +76,10 @@ export default {
   5% {text-shadow: 2px 1px 0 #663300;}
   7% {text-shadow: 2px 1px 0 #663300;}
   8% {text-shadow: 1px 1px 0 #663300;}
-  10% {text-shadow: inset 1px 1px 0 #663300;}
-  11% {text-shadow: inset 2px 1px 0 #663300;}
-  13% {text-shadow: inset 2px 1px 0 #663300;}
-  14% {text-shadow: inset 1px 1px 0 #663300;}
+  10% {text-shadow: -1px -1px 0 #663300;}
+  11% {text-shadow: -2px -1px 0 #663300;}
+  13% {text-shadow: -2px -1px 0 #663300;}
+  14% {text-shadow: -1px -1px 0 #663300;}
   19% {text-shadow: 1px 1px 0 #663300;}
   20% {text-shadow: 2px 1px 0 #663300;}
   22% {text-shadow: 2px 1px 0 #663300;}
@@ -97,10 +97,10 @@ export default {
   70% {text-shadow: 2px 1px 0 #663300;}
   72% {text-shadow: 2px 1px 0 #663300;}
   73% {text-shadow: 1px 1px 0 #663300;}
-  75% {text-shadow: inset 1px 1px 0 #663300;}
-  76% {text-shadow: inset 2px 1px 0 #663300;}
-  78% {text-shadow: inset 2px 1px 0 #663300;}
-  79% {text-shadow: inset 1px 1px 0 #663300;}
+  75% {text-shadow: -1px -1px 0 #663300;}
+  76% {text-shadow: -2px -1px 0 #663300;}
+  78% {text-shadow: -2px -1px 0 #663300;}
+  79% {text-shadow: -1px -1px 0 #663300;}
   84% {text-shadow: 1px 1px 0 #663300;}
   85% {text-shadow: 2px 1px 0 #663300;}
   87% {text-shadow: 2px 1px 0 #663300;}
